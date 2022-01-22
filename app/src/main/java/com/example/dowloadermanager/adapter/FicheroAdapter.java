@@ -43,7 +43,7 @@ public class FicheroAdapter extends RecyclerView.Adapter<FicheroAdapter.FicheroV
     @Override
     public void onBindViewHolder(@NonNull FicheroAdapter.FicheroViewHolder holder, int position) {
           Ficheros ficheros = data.get(position);
-        holder.txtId.setText((Integer) Utils.coalesce(ficheros.getId(), "N/D"));
+        holder.txtId.setText(((Integer) Utils.coalesce(ficheros.getId(), "N/D")).toString());
         holder.txtNombre.setText(Utils.coalesce(ficheros.getNombre(), "N/D"));
         holder.txtpeso.setText(Utils.coalesce(ficheros.getPeso(), "N/D"));
 
